@@ -1,0 +1,153 @@
+/* NEW CLEAN CSS WITH BLUE AREA UNTIL SOFTWARE COMPETENCY */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root{
+  --bg-blue-top: #071a35;      /* Blue area until Software Competency */
+  --bg-main: #0b1220;          /* Dark area after Software Competency */
+  --muted: #9aa4b2;
+  --accent: #0ea5a4;
+  --accent-2: #7dd3fc;
+  --radius: 12px;
+  --max-width: 900px;
+  --ff-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:var(--ff-sans);
+  background: var(--bg-main);
+  color:#e6eef6;
+  line-height:1.45;
+}
+
+/* PAGE WRAPPER */
+.page{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:32px 20px;
+}
+
+/* BLUE SECTION WRAPPER UNTIL SOFTWARE COMPETENCY */
+.top-blue-section{
+  background: var(--bg-blue-top);
+  padding: 30px 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+/* HEADER */
+header{
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:14px;
+}
+
+header img{
+  width:160px;
+  height:160px;
+  object-fit:cover;
+  border-radius:50%;
+  border:3px solid rgba(255,255,255,0.15);
+}
+
+header h1{
+  margin:0;
+  font-size:1.8rem;
+}
+
+/* HEADER LINKS */
+.header-links{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+/* Default link color (same as Personal Details links) */
+.header-links a{
+  color: var(--muted);
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* Hover color */
+.header-links a:hover{
+  color: var(--accent-2);
+}
+
+/* NAV */
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:16px;
+  padding:0;
+  justify-content:center;
+}
+nav a{
+  color:var(--muted);
+  text-decoration:none;
+  font-weight:600;
+}
+nav a:hover{color:var(--accent-2)}
+
+/* MAIN */
+main{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+/* PERSONAL SECTION - NO CARD BACKGROUND (BLUE AREA) */
+#personal{
+  background: transparent;
+  padding: 10px 0;
+}
+
+/* TABLE */
+.info-table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:10px;
+}
+.info-table th,.info-table td{
+  padding:10px;
+  border:1px solid rgba(255,255,255,0.15);
+  text-align:left;
+  color:#d9e3f2;
+  font-size:0.95rem;
+}
+.info-table th{background:rgba(255,255,255,0.1);font-weight:700}
+
+/* PERSONAL LIST */
+#personal ul{list-style:none;margin:16px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+#personal li{background:rgba(255,255,255,0.1);padding:10px;border-radius:8px;color:#d4dceb}
+#personal li strong{color:white}
+
+/* SOFTWARE COMPETENCY - DARK AREA BEGINS */
+#skills, #hobbies{
+  background: var(--bg-main);
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 6px 20px rgba(2,6,23,0.5);
+  border:1px solid rgba(255,255,255,0.05);
+}
+#skills h2, #hobbies h2{margin-top:0}
+
+/* SKILLS */
+#skills ul{display:flex;gap:10px;flex-wrap:wrap;list-style:none;padding:0;margin:0}
+#skills li{background:rgba(14,165,164,0.15);padding:8px 12px;border-radius:999px;color:var(--accent-2);font-weight:700}
+
+/* HOBBIES */
+#hobbies ul{margin:0;padding-left:20px;color:#cdd6e3}
+
+/* FOOTER */
+footer{text-align:center;color:var(--muted);margin-top:30px;font-size:0.9rem}
+
+/* RESPONSIVE */
+@media(max-width:700px){#personal ul{grid-template-columns:1fr}}
+@media(max-width:420px){header img{width:120px;height:120px}}
